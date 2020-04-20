@@ -1,0 +1,106 @@
+main {
+    margin: 25px 0;
+    padding: 25px 0;
+    background-color: rgb(224, 235, 255);
+    position:relative;  
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.fiveDayForecast {
+    display: grid;
+    grid-column-gap: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 40px;
+    column-gap: 20px;
+}
+
+.dayName {
+    grid-column: 1 / 2;
+    text-align: start;
+    row-gap: 10px;
+}
+
+.fiveDayRow {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-column: 2 / 10;
+    grid-row: 2 / 7;
+    row-gap: 20px;
+}
+
+.fiveDayHours {
+    grid-row: 1 / 2;
+    margin-bottom: 15px;
+}
+
+.lastUpdate {
+    font-size: 0.9rem;
+    color: #777777;
+    margin: auto 40px;
+}
+
+.cityTemp {
+    display: grid;
+    margin: auto;
+    grid-template-rows: 60% 40%;
+    .tempDisplay {
+        font-size: 4rem;
+        margin: 25px auto 0px auto;
+    }
+    .cityDisplay {
+        border-bottom: 10px solid rgba(255, 255, 255, 0.705);
+        margin: 13px 0px 0px 0px;
+        padding: 0 10px;
+        box-shadow: 0px 16px 24px -9px rgba(0,0,0,0.5)
+    }
+}
+
+.minmax-temp {
+    margin-top: 40px;
+}
+
+.sunrise, .sunset {
+    width: 1.5rem;
+    height: 1.5rem;
+    grid-row: 1 / 2;
+    justify-self: center;
+    margin-bottom: 4px;
+}
+
+.sunrise-sunset {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.hum-wind {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "a b" "c d";
+    .hw-a {
+        grid-area: a;
+    }
+    .hw-b {
+        grid-area: b;
+    }
+    .hw-c {
+        grid-area: c;
+        font-size: 1rem;
+    }
+    .hw-d {
+        grid-area: d;
+        font-size: 1rem;
+    }
+}

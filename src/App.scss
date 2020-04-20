@@ -1,0 +1,58 @@
+.App {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  justify-items: center;
+  text-align: center;
+  padding-top: 20px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-size: calc(10px + 2vmin);
+  color: rgb(66, 66, 66);
+  }
+
+.topBar {
+  display: flex;
+}
+
+.tempButton {
+  background-color: #fff;
+  border-width: 0px 0px 1px 0px;
+  border-color: rgba(85, 85, 85, 0.5);
+  box-shadow: 0px;
+  outline: 0px;
+  padding: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+  &:hover {
+    transform: translateY(-3px);
+    transition: ease-out 0.2s;
+    font-style: bold;
+    border-bottom: 2px solid black;
+  }
+}
+  
+.geoLocation {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
