@@ -100,13 +100,12 @@ function App() {
 
   return (
     <div className="App">
-
-      <LocationIcon onClick={getLocation} className="geoLocation" />
-      
       <div className="topBar">  
-          <button className="tempButton" onClick={() => setTempUnit('metric')}>Celsius</button>
-          <button className="tempButton" onClick={() => setTempUnit('imperial')}>Fahrenheit</button>
-          <button className="tempButton" onClick={() => setTempUnit('kelvin')}>Kelvin</button>
+        <LocationIcon onClick={getLocation} className="geoLocation" />
+      
+        <button className="tempButton" onClick={() => setTempUnit('metric')}>Celsius</button>
+        <button className="tempButton" onClick={() => setTempUnit('imperial')}>Fahrenheit</button>
+        <button className="tempButton" onClick={() => setTempUnit('kelvin')}>Kelvin</button>
       </div>
 
       <TodaysWeather data={todayData} tempUnit={tempUnit} />
